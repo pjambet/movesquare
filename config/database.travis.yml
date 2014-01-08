@@ -1,0 +1,7 @@
+test:
+  adapter: postgresql
+  database: mayors_test
+  username: postgres
+  password:
+  host: localhost
+  encoding: UTF8
