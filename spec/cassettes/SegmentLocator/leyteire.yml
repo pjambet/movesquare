@@ -1,0 +1,409 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://maps.google.com/maps/api/geocode/json?latlng=44.83175929999999,-0.5697435&sensor=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Sun, 05 Jan 2014 10:18:46 GMT
+      Expires:
+      - Mon, 06 Jan 2014 10:18:46 GMT
+      Cache-Control:
+      - public, max-age=86400
+      Vary:
+      - Accept-Language
+      Access-Control-Allow-Origin:
+      - "*"
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alternate-Protocol:
+      - 80:quic
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "results" : [
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "76",
+                       "short_name" : "76",
+                       "types" : [ "street_number" ]
+                    },
+                    {
+                       "long_name" : "Rue Leyteire",
+                       "short_name" : "Rue Leyteire",
+                       "types" : [ "route" ]
+                    },
+                    {
+                       "long_name" : "Bordeaux",
+                       "short_name" : "Bordeaux",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Gironde",
+                       "short_name" : "33",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Aquitaine",
+                       "short_name" : "Aquitaine",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "France",
+                       "short_name" : "FR",
+                       "types" : [ "country", "political" ]
+                    },
+                    {
+                       "long_name" : "33800",
+                       "short_name" : "33800",
+                       "types" : [ "postal_code" ]
+                    }
+                 ],
+                 "formatted_address" : "76 Rue Leyteire, 33800 Bordeaux, France",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 44.83175929999999,
+                       "lng" : -0.5697435
+                    },
+                    "location_type" : "ROOFTOP",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 44.83310828029149,
+                          "lng" : -0.5683945197084979
+                       },
+                       "southwest" : {
+                          "lat" : 44.83041031970849,
+                          "lng" : -0.5710924802915019
+                       }
+                    }
+                 },
+                 "types" : [ "street_address" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Capucins - Victoire",
+                       "short_name" : "Capucins - Victoire",
+                       "types" : [ "neighborhood", "political" ]
+                    },
+                    {
+                       "long_name" : "Bordeaux",
+                       "short_name" : "Bordeaux",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Gironde",
+                       "short_name" : "33",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Aquitaine",
+                       "short_name" : "Aquitaine",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "France",
+                       "short_name" : "FR",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Capucins - Victoire, Bordeaux, France",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 44.83822,
+                          "lng" : -0.5582629
+                       },
+                       "southwest" : {
+                          "lat" : 44.825384,
+                          "lng" : -0.5772478999999999
+                       }
+                    },
+                    "location" : {
+                       "lat" : 44.8327762,
+                       "lng" : -0.5659744
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 44.83822,
+                          "lng" : -0.5582629
+                       },
+                       "southwest" : {
+                          "lat" : 44.825384,
+                          "lng" : -0.5772478999999999
+                       }
+                    }
+                 },
+                 "types" : [ "neighborhood", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "33000",
+                       "short_name" : "33000",
+                       "types" : [ "postal_code" ]
+                    },
+                    {
+                       "long_name" : "Bordeaux",
+                       "short_name" : "Bordeaux",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Gironde",
+                       "short_name" : "33",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Aquitaine",
+                       "short_name" : "Aquitaine",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "France",
+                       "short_name" : "FR",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "33000 Bordeaux, France",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 44.8592596,
+                          "lng" : -0.5640414
+                       },
+                       "southwest" : {
+                          "lat" : 44.8183497,
+                          "lng" : -0.614852
+                       }
+                    },
+                    "location" : {
+                       "lat" : 44.8350088,
+                       "lng" : -0.5872689999999999
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 44.8592596,
+                          "lng" : -0.5640414
+                       },
+                       "southwest" : {
+                          "lat" : 44.8183497,
+                          "lng" : -0.614852
+                       }
+                    }
+                 },
+                 "types" : [ "postal_code" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Bordeaux",
+                       "short_name" : "Bordeaux",
+                       "types" : [ "locality", "political" ]
+                    },
+                    {
+                       "long_name" : "Gironde",
+                       "short_name" : "33",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Aquitaine",
+                       "short_name" : "Aquitaine",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "France",
+                       "short_name" : "FR",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Bordeaux, France",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 44.916704,
+                          "lng" : -0.5333089999999999
+                       },
+                       "southwest" : {
+                          "lat" : 44.810752,
+                          "lng" : -0.638973
+                       }
+                    },
+                    "location" : {
+                       "lat" : 44.837789,
+                       "lng" : -0.57918
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 44.916704,
+                          "lng" : -0.5333089999999999
+                       },
+                       "southwest" : {
+                          "lat" : 44.810752,
+                          "lng" : -0.638973
+                       }
+                    }
+                 },
+                 "types" : [ "locality", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Gironde",
+                       "short_name" : "33",
+                       "types" : [ "administrative_area_level_2", "political" ]
+                    },
+                    {
+                       "long_name" : "Aquitaine",
+                       "short_name" : "Aquitaine",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "France",
+                       "short_name" : "FR",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Gironde, France",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 45.573636,
+                          "lng" : 0.315137
+                       },
+                       "southwest" : {
+                          "lat" : 44.193902,
+                          "lng" : -1.261424
+                       }
+                    },
+                    "location" : {
+                       "lat" : 44.84966499999999,
+                       "lng" : -0.4502368
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 45.573636,
+                          "lng" : 0.315137
+                       },
+                       "southwest" : {
+                          "lat" : 44.193902,
+                          "lng" : -1.261424
+                       }
+                    }
+                 },
+                 "types" : [ "administrative_area_level_2", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "Aquitaine",
+                       "short_name" : "Aquitaine",
+                       "types" : [ "administrative_area_level_1", "political" ]
+                    },
+                    {
+                       "long_name" : "France",
+                       "short_name" : "FR",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "Aquitaine, France",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 45.7147689,
+                          "lng" : 1.448245
+                       },
+                       "southwest" : {
+                          "lat" : 42.777531,
+                          "lng" : -1.792325
+                       }
+                    },
+                    "location" : {
+                       "lat" : 44.7002222,
+                       "lng" : -0.2995785
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 45.7147689,
+                          "lng" : 1.448245
+                       },
+                       "southwest" : {
+                          "lat" : 42.777531,
+                          "lng" : -1.792325
+                       }
+                    }
+                 },
+                 "types" : [ "administrative_area_level_1", "political" ]
+              },
+              {
+                 "address_components" : [
+                    {
+                       "long_name" : "France",
+                       "short_name" : "FR",
+                       "types" : [ "country", "political" ]
+                    }
+                 ],
+                 "formatted_address" : "France",
+                 "geometry" : {
+                    "bounds" : {
+                       "northeast" : {
+                          "lat" : 51.0891663,
+                          "lng" : 9.560067700000001
+                       },
+                       "southwest" : {
+                          "lat" : 41.3423276,
+                          "lng" : -5.141228
+                       }
+                    },
+                    "location" : {
+                       "lat" : 46.227638,
+                       "lng" : 2.213749
+                    },
+                    "location_type" : "APPROXIMATE",
+                    "viewport" : {
+                       "northeast" : {
+                          "lat" : 51.0891663,
+                          "lng" : 9.5597934
+                       },
+                       "southwest" : {
+                          "lat" : 41.3423276,
+                          "lng" : -5.140402
+                       }
+                    }
+                 },
+                 "types" : [ "country", "political" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Sun, 05 Jan 2014 10:18:46 GMT
+recorded_with: VCR 2.8.0
