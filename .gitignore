@@ -35,6 +35,5 @@ pickle-email-*.html
 /tmp
 
 config/database.yml
-config/initializers/secret_token.rb
 
 .env
