@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.0.2'
+gem 'rails', '4.1.0.beta1'
 gem 'pg'
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
@@ -21,6 +21,9 @@ group :doc do
 end
 
 gem 'dotenv-rails', :groups => [:development, :test]
+gem 'spring', group: :development
+gem 'spring-commands-rspec'
+
 group :test do
   gem 'shoulda'
   gem 'vcr'

@@ -6,6 +6,7 @@ if ENV["CI"]
   Coveralls.wear!
 end
 
+require 'minitest/autorun' # just to remove rails 4.1.0beta warning
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
