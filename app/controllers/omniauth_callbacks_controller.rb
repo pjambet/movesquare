@@ -1,6 +1,7 @@
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def moves
-    User.find_or_create(auth_hash.credentials.to_hash)
+    user = User.find_or_create(auth_hash.credentials.to_hash)
+    sign_in user if user.persisted?
     redirect_to '/'
   end
 

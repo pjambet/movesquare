@@ -10,6 +10,7 @@ gem 'haml-rails'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-moves', github: 'nickelser/omniauth-moves'
+gem 'moves'
 gem 'geokit-rails'
 gem 'awesome_nested_set', '3.0.0.rc3'
 gem 'coveralls', require: false

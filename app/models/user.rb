@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 
   def self.find_or_create(params)
     params.slice! *%w(token refresh_token expires_at)
-    User.create params
+    User.find_or_create_by params
   end
 
 end

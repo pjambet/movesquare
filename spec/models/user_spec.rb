@@ -17,10 +17,22 @@ describe User do
     end
 
     context 'with incorrect params' do
-      let(:params) { {foo: 'XXX', refresh_token: 'YYY', expires_at: true, expires_at: 1234} }
+      let(:params) do
+        {'foo' =>  'XXX', 'refresh_token' => 'YYY', 'expires_at' => true, 'expires_at' => 1234}
+      end
       subject(:user) { User.find_or_create(params) }
 
       it { expect{user}.to raise_error(ActiveRecord::StatementInvalid) }
+    end
+
+    context 'with existing user' do
+      before(:each) { User.create params }
+      let(:params) do
+        {'token' =>  'XXX', 'refresh_token' => 'YYY', 'expires_at' => true, 'expires_at' => 1234}
+      end
+      subject(:user) { User.find_or_create(params) }
+
+      it { expect(user).to be_persisted }
     end
   end
 end
