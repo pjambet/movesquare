@@ -25,6 +25,7 @@ group :test do
   gem 'rspec-rails', '3.0.0.beta1'
   gem 'webmock', '< 1.16'
   gem 'database_cleaner'
+  gem 'coveralls', require: false
 end
 
 # Use ActiveModel has_secure_password
