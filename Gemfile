@@ -9,7 +9,7 @@ gem 'jquery-rails'
 gem 'haml-rails'
 gem 'devise'
 gem 'omniauth'
-gem 'omniauth-moves'
+gem 'omniauth-moves', github: 'nickelser/omniauth-moves'
 gem 'geokit-rails'
 gem 'awesome_nested_set', '3.0.0.rc3'
 
@@ -18,6 +18,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'dotenv-rails', :groups => [:development, :test]
 group :test do
   gem 'shoulda'
   gem 'vcr'

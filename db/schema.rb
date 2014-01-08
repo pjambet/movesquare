@@ -61,6 +61,9 @@ ActiveRecord::Schema.define(version: 20140102133523) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "token",                               null: false
+    t.string   "refresh_token",                       null: false
+    t.integer  "expires_at",                          null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

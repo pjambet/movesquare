@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/nickelser/omniauth-moves.git
+  revision: 56b8bf65efad2253c0b780c64ef2e7cce45bfa9e
+  specs:
+    omniauth-moves (0.0.1)
+      multi_json (~> 1.0)
+      omniauth (~> 1.0)
+      omniauth-oauth2 (~> 1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -56,6 +65,9 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
     docile (1.1.1)
+    dotenv (0.9.0)
+    dotenv-rails (0.9.0)
+      dotenv (= 0.9.0)
     erubis (2.7.0)
     execjs (2.0.2)
     factory_girl (4.3.0)
@@ -103,10 +115,6 @@ GEM
     omniauth (1.1.4)
       hashie (>= 1.2, < 3)
       rack
-    omniauth-moves (0.0.1)
-      multi_json (~> 1.0)
-      omniauth (~> 1.0)
-      omniauth-oauth2 (~> 1.0)
     omniauth-oauth2 (1.1.1)
       oauth2 (~> 0.8.0)
       omniauth (~> 1.0)
@@ -212,12 +220,13 @@ DEPENDENCIES
   coveralls
   database_cleaner
   devise
+  dotenv-rails
   factory_girl_rails (~> 4.0)
   geokit-rails
   haml-rails
   jquery-rails
   omniauth
-  omniauth-moves
+  omniauth-moves!
   pg
   rails (= 4.0.2)
   rspec-rails (= 3.0.0.beta1)
