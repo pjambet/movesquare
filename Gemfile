@@ -12,6 +12,7 @@ gem 'omniauth'
 gem 'omniauth-moves', github: 'nickelser/omniauth-moves'
 gem 'geokit-rails'
 gem 'awesome_nested_set', '3.0.0.rc3'
+gem 'coveralls', require: false
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -26,7 +27,6 @@ group :test do
   gem 'rspec-rails', '3.0.0.beta1'
   gem 'webmock', '< 1.16'
   gem 'database_cleaner'
-  gem 'coveralls', require: false
 end
 
 # Use ActiveModel has_secure_password
