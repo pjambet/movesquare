@@ -33,6 +33,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string :token, :null => false, :unique => true
       t.string :refresh_token, :null => false
       t.integer :expires_at, :null => false
+      t.date :first_record_on
 
       t.timestamps
     end

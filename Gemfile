@@ -14,6 +14,7 @@ gem 'moves'
 gem 'geokit-rails'
 gem 'awesome_nested_set', '3.0.0.rc3'
 gem 'coveralls', require: false
+gem 'factory_girl_rails', '~> 4.0'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -27,7 +28,6 @@ gem 'spring-commands-rspec'
 group :test do
   gem 'shoulda'
   gem 'vcr'
-  gem 'factory_girl_rails', '~> 4.0'
   gem 'rspec-rails', '3.0.0.beta1'
   gem 'webmock', '< 1.16'
   gem 'database_cleaner'

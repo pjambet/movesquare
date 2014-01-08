@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 20140102133523) do
     t.string   "token",                               null: false
     t.string   "refresh_token",                       null: false
     t.integer  "expires_at",                          null: false
+    t.date     "first_record_on"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
