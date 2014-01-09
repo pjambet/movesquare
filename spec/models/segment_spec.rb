@@ -2,10 +2,15 @@ require 'spec_helper'
 
 describe Segment do
 
-  it { expect belong_to :user }
-  it { expect validate_presence_of(:lat) }
-  it { expect validate_presence_of(:lng) }
-  it { expect(Segment.new.distance).to eq(0) }
+  context 'new instance' do
+    subject(:segment) { Segment.new }
+
+    it { expect belong_to :user }
+    it { expect validate_presence_of(:lat) }
+    it { expect validate_presence_of(:lng) }
+    it { expect(segment.distance).to eq(0) }
+    it { expect(segment.steps).to eq(0) }
+  end
 
   describe '.for_location' do
     let!(:nyc_segment) { create :segment, city: nyc }
@@ -33,4 +38,35 @@ describe Segment do
     it { expect(segments.map(&:user).uniq).to eq([user]) }
   end
 
+  describe '.create_segment' do
+    subject(:segment) { Segment.create_segment segment_data, context }
+    let(:context) { fixture('storyline.json').first['segments'] }
+
+    context 'place' do
+      let(:segment_data) { fixture('segment_place.json') }
+
+      it { expect(segment).to be_persisted }
+      it { expect(segment.distance).to be > 0 }
+      it { expect(segment.steps).to be > 0 }
+      it { expect(segment.duration).to be > 0 }
+    end
+
+    context 'move' do
+      let(:segment_data) { fixture('segment_move_wlk.json') }
+
+      it { expect(segment).to be_persisted }
+      # it { expect(segment.distance).to be > 0 }
+      # it { expect(segment.steps).to be > 0 }
+      # it { expect(segment.duration).to be > 0 }
+
+      context 'trp' do
+        # let(:segment_data) { fixture('storyline.json').first['segments'][1] }
+
+        # it { expect(segment).to be_persisted }
+        # it { expect(segment.distance).to be > 0 }
+        # it { expect(segment.steps).to be > 0 }
+        # it { expect(segment.duration).to be > 0 }
+      end
+    end
+  end
 end

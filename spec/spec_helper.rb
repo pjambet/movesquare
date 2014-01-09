@@ -56,3 +56,7 @@ RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
   config.include Devise::TestHelpers, type: :controller
 end
+
+def fixture(name)
+  JSON.parse(File.open("spec/fixtures/#{name}").read)
+end

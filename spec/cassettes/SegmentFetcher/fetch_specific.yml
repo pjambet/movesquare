@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.moves-app.com/api/v1/user/activities/daily/2013-01-01?access_token=5t49q6Tpe8nCNEQ7bJxchcRJ4oQU25ebOumrWTe1RTqmEivJvrJjOcu2w5kMeFms
+    uri: https://api.moves-app.com/api/v1/user/storyline/daily/2014-01-01
     body:
       encoding: US-ASCII
       string: ''
@@ -11,6 +11,8 @@ http_interactions:
       - "*/*; q=0.5, application/xml"
       Accept-Encoding:
       - gzip, deflate
+      Authorization:
+      - Bearer BGr3iE1BWtqiAnRBeRRjB8MwpwMcB5hG10r5695Ibvs1G6mq_cOPh69ry1tZW7bb
       User-Agent:
       - Ruby
   response:
@@ -21,19 +23,19 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Thu, 09 Jan 2014 02:03:50 GMT
+      - Thu, 09 Jan 2014 20:39:43 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '57'
+      - '883'
       Connection:
       - keep-alive
       Vary:
       - Accept-Encoding
       X-Ratelimit-Hourremaining:
-      - '1995'
+      - '1996'
       Etag:
-      - W/"4c107586931e3f80ad6586659860a6e3"
+      - W/"26fde01c3cb078bc06e0a4ab6ed2ef6e"
       X-Ratelimit-Hourlimit:
       - '2000'
       Content-Encoding:
@@ -45,8 +47,26 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAAAIuuVkpJLElVslIyMjA0NjA0MFTSUSpOTc9NzSspVrLKK83J
-        qY0FAOuH5mQlAAAA
+        H4sIAAAAAAAAAJ1X207jUAz8lzyjytdz6RfsB/C0iIcKqt1qIUUQQAj139dp
+        2jRxk5L0CQWnnmN7zoxz9108rqp1sSwIUAABi5vibf3neV1Wb8Xy7ruovl7q
+        8MvT6mFdx6rVa3W7eT78hJEYbzEzk/y28Lp8PAX3+W5RASjUwSbH8rvYPBbL
+        xIw5Jr45IryX/8rtZ2nvPW0fVtVmW9avPq2qYim6IKCcCVPKddxCuogKMcQY
+        c9ztborVQ7X52FSbdXPsw+OXJf58+jd2cGJgymcHb4Oi++Dj++vhQBkWYM8b
+        y1bWtWion9+q9YvBItLu5mfopi0A1gAe6ZkFtQmeoJE8tvawcQY2UsY4ho1M
+        TbCDnRw2JuqAk/jCX9/LcXAWGSOLBSO7nmPUPjj1uk5JZ1ROrAxj4MShCZ7A
+        A3jsDrTCDGQG0HOqtUH1VLP3HbRgB9uGNANcIEEaAxc0vrmeo+t5hC7ZZAa2
+        MVNhVBwQI3myCTuyYY/pyjPATTdgbN4WZHTzjq7p0qVanlM2qyqNIbMGIj9v
+        V3W3aJ7BNPtjRB5DFhDyw4bohh17/ZbdfY1+0Onn7ceAEXitHzQCG91+1uNa
+        Xb2+XJubxZVlxtAvywzHpjmjkW3Si9V0b404ieZuI0F7jRyxVJ9+CDvRgdU9
+        Sw2aTb+EJloqZpEYKSh2LFUFIAcIV1jq8eDKowq7D6Z+05K7cJ2OxRmzSpjG
+        Z5XqWp2wo+M89QRuBufbYQwi24ah13N+Wu5TVep1W4is0Bm8a5MOImpsnMKt
+        chQhy9RVzgalSSiInniXiCllBL6ed8m0/EKrSMCrHvxgcdMZcGzLEHS2FTNc
+        ZsDFsibl7thIcu7J2q0rhDki1OYfBMeIOkAG0+nEYTIZVAKQUuqQQSEFjpB2
+        u6kTaM8ycFBzeRG8/g7+mNsZuQRxxpME671xeuNPRx7CRNHma8vfQoop5EmN
+        l4V9TYmtwiEcG2//iglBsn31XH0LLx+8DjrLDI6sXapOV38y5x34jmuDSZ3p
+        UMh+r0/ddUt48u0/jWMI2/I2W+BV3Pspt/qdRwh9YciAac7as887trmeCuoo
+        qf8qvqikl4nfpj/Dpr3HI56vPSYgtsib/ZSr/Q9+bZ9rgAPe3+bp/A7wItii
+        Yw5LxwWIF9m2XQ32QUSmPfe7+//sI8vKIBEAAA==
     http_version: 
-  recorded_at: Thu, 09 Jan 2014 02:03:45 GMT
+  recorded_at: Thu, 09 Jan 2014 20:39:43 GMT
 recorded_with: VCR 2.8.0

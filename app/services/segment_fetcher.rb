@@ -1,15 +1,27 @@
 class SegmentFetcher
   attr_reader :user
-  # Fetch all segments from moves api and locate them
+
   def initialize(user)
     @user = user
   end
 
+  def self.crawl
+    self
+  end
+
+  def storyline(date=nil)
+    @storyline ||= client.daily_storyline(date)
+  end
+
   def fetch(date=nil)
-    client.daily_activities date
+    segments = storyline(date).first['segments']
+    segments.map do |segment_data|
+      segment = Segment.create_segment segment_data, segments
+      segment
+    end
   end
 
   def client
-    Moves::Client.new(user.token)
+    @client ||= Moves::Client.new(user.token)
   end
 end

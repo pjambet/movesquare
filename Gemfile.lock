@@ -9,10 +9,9 @@ GIT
 
 GIT
   remote: git://github.com/pjambet/moves.git
-  revision: 0c671e98135c8c9ead150695d65f90e64bf91998
-  branch: fix/defaul_day
+  revision: b94a09662560301b8f7a80beadb7eab48a692cb5
   specs:
-    moves (0.0.3)
+    moves (0.0.4)
       rest-client
 
 GEM

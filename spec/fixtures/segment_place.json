@@ -1,0 +1,31 @@
+{
+  "activities": [
+      {
+          "activity": "wlk",
+          "distance": 15.0,
+          "duration": 30.0,
+          "endTime": "20131129T235856Z",
+          "startTime": "20131129T235826Z",
+          "steps": 30
+      },
+      {
+          "activity": "wlk",
+          "distance": 25.0,
+          "duration": 60.0,
+          "endTime": "20131130T020624Z",
+          "startTime": "20131130T020524Z",
+          "steps": 51
+      }
+  ],
+  "endTime": "20131130T021314Z",
+  "place": {
+      "id": 77973204,
+      "location": {
+          "lat": 40.3951656332,
+          "lon": -74.8044393708
+      },
+      "type": "unknown"
+  },
+  "startTime": "20131129T223439Z",
+  "type": "place"
+}
