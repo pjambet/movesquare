@@ -26,7 +26,5 @@ class Segment < ActiveRecord::Base
   end
 
   def self.rating_for_user(user, location)
-    # city level
-    distance = Segment.total_distance(Segment.for_user(user))
   end
 end

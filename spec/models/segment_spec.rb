@@ -21,4 +21,16 @@ describe Segment do
     end
   end
 
+  describe '.for_user' do
+    let(:user) { create :user }
+    before(:each) do
+      2.times { create :segment }
+      2.times { create :segment, user: user }
+    end
+    subject(:segments) { Segment.for_user user }
+
+    it { expect(segments.count).to eq(2) }
+    it { expect(segments.map(&:user).uniq).to eq([user]) }
+  end
+
 end
