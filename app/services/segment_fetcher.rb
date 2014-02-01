@@ -16,8 +16,7 @@ class SegmentFetcher
   def fetch(date=nil)
     segments = storyline(date).first['segments']
     segments.map do |segment_data|
-      segment = Segment.create_segment segment_data, segments
-      segment
+      SegmentBuilder::Builder.new(segment_data, segments).build
     end
   end
 

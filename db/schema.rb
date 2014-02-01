@@ -31,13 +31,14 @@ ActiveRecord::Schema.define(version: 20140102133523) do
   end
 
   create_table "segments", force: true do |t|
-    t.integer  "user_id"
-    t.float    "distance",        default: 0.0
+    t.string   "segment_type"
     t.integer  "steps",           default: 0
     t.integer  "duration",        default: 0
+    t.float    "distance",        default: 0.0
     t.float    "lat"
     t.float    "lng"
     t.boolean  "processed"
+    t.integer  "user_id"
     t.integer  "neighborhood_id"
     t.integer  "city_id"
     t.integer  "state_id"
