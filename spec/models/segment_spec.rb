@@ -38,4 +38,35 @@ describe Segment do
     it { expect(segments.map(&:user).uniq).to eq([user]) }
   end
 
+  describe '#located?' do
+    context 'new instance' do
+      subject(:segment) { Segment.new }
+      it { expect(segment).not_to be_located }
+    end
+
+    context 'with neighborhood' do
+      let(:neighborhood) { mock_model(Location) }
+      subject(:segment) { Segment.new(neighborhood: neighborhood) }
+      it { expect(segment).to be_located }
+    end
+
+    context 'with city' do
+      let(:city) { mock_model(Location) }
+      subject(:segment) { Segment.new(city: city) }
+      it { expect(segment).to be_located }
+    end
+
+    context 'with state' do
+      let(:state) { mock_model(Location) }
+      subject(:segment) { Segment.new(state: state) }
+      it { expect(segment).to be_located }
+    end
+
+    context 'with country' do
+      let(:country) { mock_model(Location) }
+      subject(:segment) { Segment.new(country: country) }
+      it { expect(segment).to be_located }
+    end
+  end
+
 end

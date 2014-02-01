@@ -26,4 +26,8 @@ class Segment < ActiveRecord::Base
     self.steps ||= 0 # Might be a better solution to enforce that at DB level
   end
 
+  def located?
+    neighborhood || city || state || country
+  end
+
 end

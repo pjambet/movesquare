@@ -15,7 +15,7 @@ class SegmentLocator
     locate
   end
 
-  def create_segment
+  def locate_segment
     SegmentLocation.new(neighborhood, state,  city, country)
   end
 

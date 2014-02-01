@@ -22,14 +22,18 @@ module SegmentBuilder
     end
 
     def persist
-      Segment.create params
+      segment_location = SegmentLocator.new(params[:lat], params[:lng]).locate_segment
+      Segment.create params.update(neighborhood: segment_location.neighborhood,
+                                   city: segment_location.city,
+                                   state: segment_location.state,
+                                   country: segment_location.country)
     end
 
     def activities_data
       # TODO : Check activity type before adding it
       if segment_data['activities']
         activities = segment_data['activities']
-        activities_data = {
+        {
           distance: activities.map{ |act| act['distance'] || 0 }.reduce(&:+),
           steps: activities.map{ |act| act['steps'] || 0 }.reduce(&:+),
           duration: activities.map{ |act| act['duration'] || 0 }.reduce(&:+),
@@ -38,32 +42,37 @@ module SegmentBuilder
         {}
       end
     end
+
+    def params
+      {
+        lat: location_hash['lat'],
+        lng: location_hash['lon'],
+      }
+    end
   end
 
   class PlaceBuilder < Builder
     def params
-      location = segment_data['place']['location']
-      segment_params = {
-        lat: location['lat'],
-        lng: location['lon'],
-        segment_type: 'move'
-      }
+      segment_params = super.update({segment_type: 'move'})
       segment_params.update(activities_data)
+    end
+
+    def location_hash
+      segment_data['place']['location']
     end
   end
 
   class MoveBuilder < Builder
     def params
+      segment_params = super.update({segment_type: 'place'})
+      segment_params.update(activities_data)
+    end
+
+    def location_hash
       # try to find previous place
       index = context.index(segment_data)
       prev = context[index - 1] # should be a place
-      location = prev['place']['location']
-      segment_params = {
-        lat: location['lat'],
-        lng: location['lon'],
-        segment_type: 'place'
-      }
-      segment_params.update(activities_data)
+      prev['place']['location']
     end
   end
 end

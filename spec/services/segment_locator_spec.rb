@@ -1,13 +1,13 @@
 require 'spec_helper'
 
 describe SegmentLocator do
-  describe '.create_segment' do
+  describe '.locate_segment' do
 
     context 'Menahan Avenue', :vcr do
       before(:all) do
         lat, lng = 40.7028983,-73.91233849999999
         VCR.use_cassette('SegmentLocator/menahan') do
-          @segment = SegmentLocator.new(lat, lng).create_segment
+          @segment = SegmentLocator.new(lat, lng).locate_segment
         end
       end
 
@@ -52,7 +52,7 @@ describe SegmentLocator do
       before(:all) do
         lat, lng = 44.83175929999999, -0.5697435
         VCR.use_cassette('SegmentLocator/leyteire') do
-          @segment = SegmentLocator.new(lat, lng).create_segment
+          @segment = SegmentLocator.new(lat, lng).locate_segment
         end
       end
       subject(:segment) { @segment }
