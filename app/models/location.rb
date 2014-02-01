@@ -2,7 +2,7 @@ class Location < ActiveRecord::Base
 
   acts_as_nested_set
 
-  ALL_LEVELS = %i(neighborhood city state country)
+  LEVELS = %i(neighborhood city state country)
 
   validates :slug, :location_type, presence: true
 
@@ -17,7 +17,7 @@ class Location < ActiveRecord::Base
   end
 
   def self.valid_location_type?(location_type)
-    ALL_LEVELS.include?(location_type) || ALL_LEVELS.map(&:to_s).include?(location_type)
+    LEVELS.include?(location_type) || LEVELS.map(&:to_s).include?(location_type)
   end
 
 end
