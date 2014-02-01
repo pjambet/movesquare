@@ -26,6 +26,7 @@ module SegmentBuilder
     end
 
     def activities_data
+      # TODO : Check activity type before adding it
       if segment_data['activities']
         activities = segment_data['activities']
         activities_data = {
