@@ -12,7 +12,7 @@ describe SegmentLocator do
       end
 
       subject(:segment) { @segment }
-      it { expect(segment).to be_an_instance_of Segment }
+      it { expect(segment).to be_an_instance_of SegmentLocator::SegmentLocation }
 
       context 'neighborhood' do
         let(:neighborhood) { segment.neighborhood }
@@ -57,7 +57,7 @@ describe SegmentLocator do
       end
       subject(:segment) { @segment }
 
-      it { expect(segment).to be_an_instance_of Segment }
+      it { expect(segment).to be_an_instance_of SegmentLocator::SegmentLocation }
       it { expect(segment.country).to be_an_instance_of Location }
       it { expect(segment.country.slug).to eq('fr') }
     end

@@ -1,4 +1,14 @@
 class SegmentLocator
+  class SegmentLocation
+    attr_accessor :neighborhood, :state, :city, :country
+
+    def initialize(neighborhood, state, city, country)
+      @neighborhood = neighborhood
+      @state = state
+      @city = city
+      @country = country
+    end
+  end
 
   def initialize(lat, lng)
     @lat, @lng = lat, lng
@@ -6,8 +16,7 @@ class SegmentLocator
   end
 
   def create_segment
-    Segment.create(lat: @lat, lng: @lng, neighborhood: neighborhood, state: state,
-                   city: city, country: country)
+    SegmentLocation.new(neighborhood, state,  city, country)
   end
 
   def locate
