@@ -16,6 +16,7 @@ gem 'geokit-rails'
 gem 'awesome_nested_set', '3.0.0.rc3'
 gem 'coveralls', require: false
 gem 'factory_girl_rails', '~> 4.0'
+gem "sentry-raven", :git => "https://github.com/getsentry/raven-ruby.git"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
