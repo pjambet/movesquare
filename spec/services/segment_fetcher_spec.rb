@@ -25,17 +25,49 @@ describe SegmentFetcher do
   describe '#fetch' do
     let(:user) { mock_model('User', token: token) }
     subject(:fetcher) { SegmentFetcher.new(user) }
-    let(:result) do
-      VCR.use_cassette('SegmentFetcher/fetch_specific') { fetcher.fetch '2014-01-01' }
+
+    context 'with a result' do
+      let(:result) do
+        VCR.use_cassette('SegmentFetcher/fetch_specific') { fetcher.fetch '2014-01-01' }
+      end
+
+      it { expect(result).to be_an_instance_of(Array) }
+      it { expect(result.length).to be > 1  }
+      it { expect(result.first).to be_an_instance_of(Segment)  }
+      it { expect(result.first).to be_persisted }
     end
 
-    it { expect(result).to be_an_instance_of(Array) }
-    it { expect(result.length).to be > 1  }
-    it { expect(result.first).to be_an_instance_of(Segment)  }
-    it { expect(result.first).to be_persisted }
+    context 'no record' do
+      let(:result) do
+        VCR.use_cassette('SegmentFetcher/no_results') { fetcher.fetch '2011-01-01' }
+      end
+
+      it { expect(result).to be_nil }
+    end
+  end
+
+  describe '#fetch_all' do
+    let(:user) { mock_model('User', token: token) }
+    subject(:fetcher) { SegmentFetcher.new(user) }
+    let(:today) { Date.today }
+
+    context 'with ???' do
+
+      it 'calls fetch with today' do
+        expect(fetcher).to receive(:fetch).with(today).exactly(1).times
+        fetcher.fetch_all
+      end
+    end
   end
 
   describe '.crawl' do
-    it { expect(SegmentFetcher.crawl).not_to be_nil }
+    before(:each) { 3.times { mock_model(User, token: token) } }
+
+    it 'crawls without error' do
+      VCR.use_cassette('SegmentFetcher/crawl') do
+        expect{ SegmentFetcher.crawl }.not_to raise_error
+      end
+    end
   end
+
 end

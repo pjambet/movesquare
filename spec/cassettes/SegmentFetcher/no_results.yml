@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.moves-app.com/api/v1/user/storyline/daily/2011-01-01
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer BGr3iE1BWtqiAnRBeRRjB8MwpwMcB5hG10r5695Ibvs1G6mq_cOPh69ry1tZW7bb
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 02 Feb 2014 05:34:23 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '89'
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      X-Ratelimit-Hourremaining:
+      - '1999'
+      X-Ratelimit-Hourlimit:
+      - '2000'
+      Content-Encoding:
+      - gzip
+      X-Ratelimit-Minuteremaining:
+      - '59'
+      X-Ratelimit-Minutelimit:
+      - '60'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAA3J0QmAMAwFwFUeGcNtInnVgraapIiIuyvc3z1C9+4ySa6E
+        8xyMpMG1LcQ+IjHzlxfZMIKOw3upGwOl+t+mSWgzZDe95f0Aw7+UnVIAAAA=
+    http_version: 
+  recorded_at: Sun, 02 Feb 2014 05:34:23 GMT
+recorded_with: VCR 2.8.0

@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.moves-app.com/api/v1/user/storyline/daily/2014-02-02
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer XXX
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Sun, 02 Feb 2014 05:20:05 GMT
+      Content-Type:
+      - text/plain; charset=utf-8
+      Content-Length:
+      - '40'
+      Connection:
+      - keep-alive
+      Content-Encoding:
+      - gzip
+      Vary:
+      - Accept-Encoding
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAEutKMgsSk2JT0xOTi0uji/Jz07NAwDE1Iz+FAAAAA==
+    http_version: 
+  recorded_at: Sun, 02 Feb 2014 05:20:05 GMT
+recorded_with: VCR 2.8.0
