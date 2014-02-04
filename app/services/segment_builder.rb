@@ -37,13 +37,13 @@ module SegmentBuilder
     end
 
     def activities_data
-      # TODO : Check activity type before adding it
-      if segment_data['activities']
-        activities = segment_data['activities']
+      activities = segment_data['activities']
+      if activities
+        calc = Calculator.new activities
         {
-          distance: activities.map{ |act| act['distance'] || 0 }.reduce(&:+),
-          steps: activities.map{ |act| act['steps'] || 0 }.reduce(&:+),
-          duration: activities.map{ |act| act['duration'] || 0 }.reduce(&:+),
+          distance: calc.total_distance,
+          steps: calc.total_steps,
+          duration: calc.total_duration,
         }
       else
         {}
