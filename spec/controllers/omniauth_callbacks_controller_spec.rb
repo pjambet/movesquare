@@ -5,7 +5,8 @@ describe OmniauthCallbacksController do
     @request.env['devise.mapping'] = Devise.mappings[:user]
     @request.env['omniauth.auth'] = double(
       credentials: {'token' =>  'XXX', 'refresh_token' =>  'YYY', 'expires_at' =>  '1234'},
-      info: double(firstDate: '20130101')
+      info: double(firstDate: '20130101'),
+      extra: double(raw_info: {})
     )
   end
 
