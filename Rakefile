@@ -4,3 +4,9 @@
 require File.expand_path('../config/application', __FILE__)
 
 Mayors::Application.load_tasks
+
+namespace :segments do
+  task fetch_all: :environment do
+    SegmentFetcher.crawl
+  end
+end

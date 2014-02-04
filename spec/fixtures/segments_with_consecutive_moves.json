@@ -1,0 +1,182 @@
+[
+  {
+      "activities": [
+          {
+              "activity": "wlk",
+              "distance": 40.0,
+              "duration": 60.0,
+              "endTime": "20140123T131251Z",
+              "startTime": "20140123T131151Z",
+              "steps": 81
+          }
+      ],
+      "endTime": "20140123T131950Z",
+      "place": {
+          "id": 88258770,
+          "location": {
+              "lat": 40.7223599785,
+              "lon": -73.9867139983
+          },
+          "name": "Home",
+          "type": "home"
+      },
+      "startTime": "20140122T194347Z",
+      "type": "place"
+  },
+  {
+      "activities": [
+          {
+              "activity": "wlk",
+              "distance": 775.0,
+              "duration": 629.0,
+              "endTime": "20140123T133019Z",
+              "startTime": "20140123T131950Z",
+              "steps": 646
+          }
+      ],
+      "endTime": "20140123T133018Z",
+      "startTime": "20140123T131950Z",
+      "type": "move"
+  },
+  {
+      "activities": [
+          {
+              "activity": "wlk",
+              "distance": 576.0,
+              "duration": 485.0,
+              "endTime": "20140123T134419Z",
+              "startTime": "20140123T133614Z",
+              "steps": 768
+          },
+          {
+              "activity": "wlk",
+              "distance": 268.0,
+              "duration": 226.0,
+              "endTime": "20140123T175303Z",
+              "startTime": "20140123T174917Z",
+              "steps": 357
+          },
+          {
+              "activity": "wlk",
+              "distance": 565.0,
+              "duration": 522.0,
+              "endTime": "20140123T180944Z",
+              "startTime": "20140123T180102Z",
+              "steps": 753
+          },
+          {
+              "activity": "wlk",
+              "distance": 25.0,
+              "duration": 30.0,
+              "endTime": "20140124T002707Z",
+              "startTime": "20140124T002637Z",
+              "steps": 51
+          },
+          {
+              "activity": "wlk",
+              "distance": 51.0,
+              "duration": 60.0,
+              "endTime": "20140124T010412Z",
+              "startTime": "20140124T010312Z",
+              "steps": 101
+          }
+      ],
+      "endTime": "20140124T010633Z",
+      "place": {
+          "foursquareId": "4df0e57e1f6ea135c65cfd1c",
+          "id": 78927133,
+          "location": {
+              "lat": 40.7243479598743,
+              "lon": -73.99731874465942
+          },
+          "name": "Fueled Collective",
+          "type": "foursquare"
+      },
+      "startTime": "20140123T133019Z",
+      "type": "place"
+  },
+  {
+      "activities": [
+          {
+              "activity": "wlk",
+              "distance": 1295.0,
+              "duration": 1135.0,
+              "endTime": "20140124T012528Z",
+              "startTime": "20140124T010633Z",
+              "steps": 1894
+          }
+      ],
+      "endTime": "20140124T012528Z",
+      "startTime": "20140124T010633Z",
+      "type": "move"
+  },
+  {
+      "endTime": "20140124T014029Z",
+      "place": {
+          "foursquareId": "49eeaf08f964a52078681fe3",
+          "id": 78927185,
+          "location": {
+              "lat": 40.718301364039064,
+              "lon": -73.99192996850243
+          },
+          "name": "Vanessa's Dumpling House",
+          "type": "foursquare"
+      },
+      "startTime": "20140124T012529Z",
+      "type": "place"
+  },
+  {
+      "activities": [
+          {
+              "activity": "wlk",
+              "distance": 509.0,
+              "duration": 580.0,
+              "endTime": "20140124T015009Z",
+              "startTime": "20140124T014029Z",
+              "steps": 1000
+          }
+      ],
+      "endTime": "20140124T015009Z",
+      "startTime": "20140124T014029Z",
+      "type": "move"
+  },
+  {
+      "activities": [
+          {
+              "activity": "wlk",
+              "distance": 35.0,
+              "duration": 35.0,
+              "endTime": "20140124T015044Z",
+              "startTime": "20140124T015009Z",
+              "steps": 70
+          }
+      ],
+      "endTime": "20140124T015121Z",
+      "startTime": "20140124T015009Z",
+      "type": "move"
+  },
+  {
+      "activities": [
+          {
+              "activity": "wlk",
+              "distance": 12.0,
+              "duration": 30.0,
+              "endTime": "20140124T023030Z",
+              "startTime": "20140124T023000Z",
+              "steps": 23
+          }
+      ],
+      "endTime": "20140124T133910Z",
+      "place": {
+          "id": 88258770,
+          "location": {
+              "lat": 40.7223599785,
+              "lon": -73.9867139983
+          },
+          "name": "Home",
+          "type": "home"
+      },
+      "startTime": "20140124T015122Z",
+      "type": "place"
+  }
+]

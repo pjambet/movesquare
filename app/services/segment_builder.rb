@@ -1,5 +1,6 @@
 module SegmentBuilder
   UnknownSegmentType = Class.new(StandardError)
+  NoLocationAvailable = Class.new(StandardError)
 
   class Builder
 
@@ -27,6 +28,8 @@ module SegmentBuilder
                                    city: segment_location.city,
                                    state: segment_location.state,
                                    country: segment_location.country)
+    rescue
+      # Couldn't locate
     end
 
     def activities_data
@@ -53,7 +56,7 @@ module SegmentBuilder
 
   class PlaceBuilder < Builder
     def params
-      segment_params = super.update({segment_type: 'move'})
+      segment_params = super.update({segment_type: 'place'})
       segment_params.update(activities_data)
     end
 
@@ -64,15 +67,25 @@ module SegmentBuilder
 
   class MoveBuilder < Builder
     def params
-      segment_params = super.update({segment_type: 'place'})
+      segment_params = super.update({segment_type: 'move'})
       segment_params.update(activities_data)
     end
 
     def location_hash
-      # try to find previous place
-      index = context.index(segment_data)
-      prev = context[index - 1] # should be a place
-      prev['place']['location']
+      closest_place['place']['location']
     end
+
+    def closest_place
+      index = context.index(segment_data)
+      prev_index = index - 1
+      raise NoLocationAvailable if prev_index < 0
+      prev_segment = context[prev_index]
+      while index >= 0 && prev_segment['type'] != 'place' do
+        prev_index -= 1
+        prev_segment = context[prev_index]
+      end
+      prev_segment ? prev_segment : raise(NoLocationAvailable)
+    end
+
   end
 end

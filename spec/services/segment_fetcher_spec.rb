@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe SegmentFetcher do
+  before(:each) { stub_const('SegmentFetcher::PAUSE_TIME', 0) }
   context 'new instance' do
     let(:user) { instance_double('User') }
     subject(:fetcher) { SegmentFetcher.new(user) }
@@ -44,6 +45,7 @@ describe SegmentFetcher do
 
       it { expect(result).to be_nil }
     end
+
   end
 
   describe '#fetch_all' do

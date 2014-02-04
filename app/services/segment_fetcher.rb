@@ -1,4 +1,7 @@
 class SegmentFetcher
+
+  PAUSE_TIME = 0.3
+
   attr_reader :user
 
   def initialize(user)
@@ -14,7 +17,7 @@ class SegmentFetcher
 
   def storyline(date=nil)
     begin
-      @storyline ||= client.daily_storyline(date)
+      client.daily_storyline(date)
     rescue RestClient::BadRequest
       nil
     end
@@ -30,7 +33,10 @@ class SegmentFetcher
   def fetch(date=nil)
     return nil unless storyline(date)
     segments = storyline(date).first['segments']
+    p date
+    p segments
     segments.map do |segment_data|
+      sleep(PAUSE_TIME)
       SegmentBuilder::Builder.new(segment_data, segments).build
     end
   end

@@ -1,0 +1,62 @@
+[
+    {
+        "endTime": "20131019T083138Z",
+        "place": {
+            "id": 69003650,
+            "location": {
+                "lat": 44.8401344963,
+                "lon": -0.568250559
+            },
+            "type": "unknown"
+        },
+        "startTime": "20131017T191945Z",
+        "type": "place"
+    },
+    {
+        "activities": [
+            {
+                "activity": "wlk",
+                "distance": 131.0,
+                "duration": 180.0,
+                "endTime": "20131019T123738Z",
+                "startTime": "20131019T123438Z",
+                "steps": 263
+            },
+            {
+                "activity": "wlk",
+                "distance": 415.0,
+                "duration": 690.0,
+                "endTime": "20131019T134733Z",
+                "startTime": "20131019T133603Z",
+                "steps": 829
+            },
+            {
+                "activity": "wlk",
+                "distance": 94.0,
+                "duration": 140.0,
+                "endTime": "20131019T155109Z",
+                "startTime": "20131019T154849Z",
+                "steps": 189
+            },
+            {
+                "activity": "wlk",
+                "distance": 162.0,
+                "duration": 240.0,
+                "endTime": "20131019T190953Z",
+                "startTime": "20131019T190553Z",
+                "steps": 324
+            },
+            {
+                "activity": "wlk",
+                "distance": 268.0,
+                "duration": 540.0,
+                "endTime": "20131020T022144Z",
+                "startTime": "20131020T021244Z",
+                "steps": 536
+            }
+        ],
+        "endTime": "20131022T231428Z",
+        "startTime": "20131019T083139Z",
+        "type": "move"
+    }
+]
