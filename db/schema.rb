@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(version: 20140102133523) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "hstore"
 
   create_table "locations", force: true do |t|
     t.float    "lat"
@@ -69,6 +70,7 @@ ActiveRecord::Schema.define(version: 20140102133523) do
     t.integer  "expires_at",                          null: false
     t.date     "first_record_on"
     t.datetime "last_fetched_at"
+    t.json     "moves_profile"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

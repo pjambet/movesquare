@@ -35,6 +35,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.integer :expires_at, :null => false
       t.date :first_record_on
       t.datetime :last_fetched_at
+      t.json :moves_profile
 
       t.timestamps
     end

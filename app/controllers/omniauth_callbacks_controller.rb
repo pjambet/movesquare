@@ -1,6 +1,7 @@
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def moves
-    @user = User.find_or_create(auth_hash.credentials.to_hash.update('first_record_on' => first_record_on))
+    @user = User.find_or_create(auth_hash.credentials.to_hash.update(
+      'first_record_on' => first_record_on), auth_hash.extra.raw_info.to_hash)
     sign_in @user if @user.persisted?
     redirect_to '/'
   end
