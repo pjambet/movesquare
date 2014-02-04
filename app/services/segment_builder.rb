@@ -4,18 +4,19 @@ module SegmentBuilder
 
   class Builder
 
-    attr_reader :segment_data, :context
+    attr_reader :segment_data, :context, :user
 
-    def initialize(segment_data, context)
+    def initialize(segment_data, context, user)
       @segment_data = segment_data
       @context = context
+      @user = user
     end
 
     def build
       if segment_data['type'] == 'place'
-        SegmentBuilder::PlaceBuilder.new(segment_data, context).persist
+        SegmentBuilder::PlaceBuilder.new(segment_data, context, user).persist
       elsif segment_data['type'] == 'move'
-        SegmentBuilder::MoveBuilder.new(segment_data, context).persist
+        SegmentBuilder::MoveBuilder.new(segment_data, context, user).persist
       elsif segment_data['type'] == 'off'
         nil
       elsif not %w(place move).include?(segment_data['type'])
@@ -28,7 +29,8 @@ module SegmentBuilder
       Segment.create params.update(neighborhood: segment_location.neighborhood,
                                    city: segment_location.city,
                                    state: segment_location.state,
-                                   country: segment_location.country)
+                                   country: segment_location.country,
+                                   user: user)
     rescue
       # Couldn't locate
     end

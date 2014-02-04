@@ -6,7 +6,7 @@ class Segment < ActiveRecord::Base
   belongs_to :state, class_name: 'Location'
   belongs_to :country, class_name: 'Location'
 
-  validates :lat, :lng, presence: true
+  validates :user, :lat, :lng, presence: true
 
   scope :for_location, ->(location) do
     if Location.valid_location_type? location.location_type

@@ -1,16 +1,17 @@
 require 'spec_helper'
 
 describe SegmentBuilder do
-  subject(:builder) { SegmentBuilder::Builder.new(segment_data, segments) }
+  subject(:builder) { SegmentBuilder::Builder.new(segment_data, segments, user) }
   let(:segment_data) { double }
   let(:segments) { [] }
+  let(:user) { create :user }
 
   it { expect(builder).not_to be_nil }
 
   describe '#create_segment' do
     subject(:segment) do
       VCR.use_cassette('SegmentBuilder/create_segment') do
-        SegmentBuilder::Builder.new(segment_data, context).build
+        SegmentBuilder::Builder.new(segment_data, context, user).build
       end
     end
     let(:context) { fixture('storyline.json').first['segments'] }
@@ -53,7 +54,7 @@ describe SegmentBuilder do
       context 'consecutive moves surrounded by places' do
         subject(:segment) do
           VCR.use_cassette('SegmentBuilder/not_surrounded') do
-            SegmentBuilder::Builder.new(segment_data, context).build
+            SegmentBuilder::Builder.new(segment_data, context, user).build
           end
         end
         let(:segment_data) { fixture('segment_move_wlk_consecutive.json') }
@@ -70,7 +71,7 @@ describe SegmentBuilder do
       context 'with nothing around' do
         subject(:segment) do
           VCR.use_cassette('SegmentBuilder/place_after') do
-            SegmentBuilder::Builder.new(segment_data, context).build
+            SegmentBuilder::Builder.new(segment_data, context, user).build
           end
         end
         let(:segment_data) { fixture('segment_move_wlk_nothing_around.json') }
@@ -82,7 +83,7 @@ describe SegmentBuilder do
       context 'with nothing after and a place before' do
         subject(:segment) do
           VCR.use_cassette('SegmentBuilder/nothing_after_place_before') do
-            SegmentBuilder::Builder.new(segment_data, context).build
+            SegmentBuilder::Builder.new(segment_data, context, user).build
           end
         end
         let(:segment_data) { fixture('segment_move_wlk_nothing_after_place_before.json') }
