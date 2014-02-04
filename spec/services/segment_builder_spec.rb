@@ -32,6 +32,12 @@ describe SegmentBuilder do
       it { expect(segment.duration).to be > 0 }
     end
 
+    context 'off' do
+      let(:segment_data) { fixture('segment_off.json') }
+
+      it { expect(segment).to be_nil }
+    end
+
     context 'move' do
       context 'surrounded by places' do
         let(:segment_data) { fixture('segment_move_wlk.json') }

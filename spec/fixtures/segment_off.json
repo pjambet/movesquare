@@ -1,0 +1,15 @@
+{
+    "activities": [
+        {
+            "activity": "wlk",
+            "distance": 43.0,
+            "duration": 49.0,
+            "endTime": "20130930T124150Z",
+            "startTime": "20130930T124101Z",
+            "steps": 86
+        }
+    ],
+    "endTime": "20130930T124150Z",
+    "startTime": "20130929T092250Z",
+    "type": "off"
+}

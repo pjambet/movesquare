@@ -12,13 +12,14 @@ module SegmentBuilder
     end
 
     def build
-      unless %w(place move).include?(segment_data['type'])
-        raise SegmentBuilder::UnknownSegmentType
-      end
       if segment_data['type'] == 'place'
         SegmentBuilder::PlaceBuilder.new(segment_data, context).persist
       elsif segment_data['type'] == 'move'
         SegmentBuilder::MoveBuilder.new(segment_data, context).persist
+      elsif segment_data['type'] == 'off'
+        nil
+      elsif not %w(place move).include?(segment_data['type'])
+        raise SegmentBuilder::UnknownSegmentType
       end
     end
 
