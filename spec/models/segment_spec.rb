@@ -8,6 +8,9 @@ describe Segment do
     it { expect belong_to :user }
     it { expect validate_presence_of(:lat) }
     it { expect validate_presence_of(:lng) }
+    it { expect validate_presence_of(:user) }
+    it { expect validate_presence_of(:activity_type) }
+    it { expect validate_presence_of(:segment_type) }
     it { expect(segment.distance).to eq(0) }
     it { expect(segment.steps).to eq(0) }
   end

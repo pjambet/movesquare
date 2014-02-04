@@ -2,6 +2,7 @@ class CreateSegments < ActiveRecord::Migration
   def change
     create_table :segments do |t|
       t.string :segment_type
+      t.string :activity_type
       t.integer :steps, default: 0
       t.integer :duration, default: 0
       t.float :distance, default: 0

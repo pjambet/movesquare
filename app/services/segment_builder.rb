@@ -30,6 +30,7 @@ module SegmentBuilder
                                    city: segment_location.city,
                                    state: segment_location.state,
                                    country: segment_location.country,
+                                   activity_type: 'wlk',
                                    user: user)
     rescue
       # Couldn't locate
